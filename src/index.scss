@@ -1,0 +1,53 @@
+@mixin count($bgc) {
+   width: 50%;
+   background-color: $bgc;
+   font-size: 1.4rem;
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   h2,h3{
+      width: 100%;
+   }
+   h3{
+      font-size: 3rem;
+   }
+   .botones{
+      display: inline-block;
+   }
+   button{
+      font-size: 1.5rem;
+      border-radius: .4rem;
+      padding: .3rem .6rem;
+      background-color: rgba(255, 255, 255, 0.459);
+      border: none;
+      margin: 1rem 1rem 1.3rem 1rem;
+   }
+   button:hover{
+      background-color: $bgc;
+      border: .2rem solid grey;
+      font-size: 1.3rem;
+   }
+   
+}
+body{
+   background-color: #98ddca;
+}
+.contenedor{
+   background-color: #ffaaa7;
+   width: 50rem;
+   margin: 10rem auto;
+   display: flex;
+   justify-content: space-evenly;
+   text-align: center;
+   flex-wrap: wrap;
+   h1{
+      width: 100%;
+      font-size: 3rem;
+   }
+   .count1{
+      @include count(#ffd3b4)
+   }
+   .count2{
+      @include count(#d5ecc2)
+   }
+}
